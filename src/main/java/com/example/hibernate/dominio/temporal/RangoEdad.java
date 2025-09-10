@@ -12,4 +12,12 @@ public class RangoEdad {
     @Column
     private int edadMaxima;
 
+    public RangoEdad(int edadMinima, int edadMaxima) {
+        this.edadMinima = edadMinima;
+        this.edadMaxima = edadMaxima;
+    }
+
+    public RangoEdad() {
+
+    }
 }

@@ -45,5 +45,18 @@ public class Busqueda {
     private EstadoBusqueda estado;
 
 
+    public Busqueda(String titulo, Genero generoPersona, String generoObra, RangoEdad rangoEdad, List<Requisito> requisitos, Remuneracion tipoRemuneracion, Ubicacion ubicacion, LocalDateTime fechaMaxima) {
+        this.titulo = titulo;
+        this.generoPersona = generoPersona;
+        this.generoObra = generoObra;
+        this.rangoEdad = rangoEdad;
+        this.requisitos = requisitos;
+        this.tipoRemuneracion = tipoRemuneracion;
+        this.ubicacion = ubicacion;
+        this.fechaMaxima = fechaMaxima;
+    }
 
+    public Busqueda() {
+
+    }
 }

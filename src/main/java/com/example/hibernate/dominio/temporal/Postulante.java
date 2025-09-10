@@ -20,4 +20,9 @@ public class Postulante {
     private DetallePostulante detalle;
 
     public Postulante() {}
+
+    public Postulante(DetallePostulante detalle, List<Postulacion> postulacionesHechas) {
+        this.detalle = detalle;
+        this.postulacionesHechas = postulacionesHechas;
+    }
 }

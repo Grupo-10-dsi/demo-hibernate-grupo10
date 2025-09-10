@@ -22,4 +22,13 @@ public class DetallePostulante {
     private String reel;
 
 
+    public DetallePostulante(String curriculum, List<String> fotos, String reel) {
+        this.curriculum = curriculum;
+        this.fotos = fotos;
+        this.reel = reel;
+    }
+
+    public DetallePostulante() {
+
+    }
 }
