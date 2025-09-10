@@ -8,14 +8,16 @@ import java.util.UUID;
 public class Postulante {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     @OneToMany
-    @JoinColumn(name= "postulante_id", referencedColumnName = "postulacion_id")
+    @JoinColumn(name= "postulante_id", referencedColumnName = "id")
     private List<Postulacion> postulacionesHechas;
 
     @OneToOne
     @JoinColumn(name = "detalle_id", referencedColumnName = "id")
-    private DetallePostulante Detalle;
+    private DetallePostulante detalle;
+
+    public Postulante() {}
 }

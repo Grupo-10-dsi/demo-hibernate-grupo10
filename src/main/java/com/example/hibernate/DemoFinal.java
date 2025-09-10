@@ -1,18 +1,5 @@
 package com.example.hibernate;
 
-import com.example.hibernate.dominio.Alumno;
-import com.example.hibernate.dominio.Calificacion;
-import com.example.hibernate.dominio.Curso;
-import com.example.hibernate.dominio.Examen;
-import com.example.hibernate.dominio.Persona;
-import com.example.hibernate.dominio.Profesor;
-import com.example.hibernate.utils.BDUtils;
-import com.example.hibernate.dominio.temporal.*;
-import java.time.LocalDateTime;
-import static java.util.Arrays.asList;
-import java.util.List;
-import javax.persistence.EntityManager;
-
 public class DemoFinal {
 
 //    public static void main(String[] args) {

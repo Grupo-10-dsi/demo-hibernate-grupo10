@@ -1,10 +1,7 @@
 package com.example.hibernate.dominio.temporal;
 
-import com.example.hibernate.dominio.Calificacion;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Entity @Table(name = "Postulacion")
