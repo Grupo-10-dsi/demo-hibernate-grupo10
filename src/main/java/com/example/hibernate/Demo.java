@@ -1,6 +1,7 @@
 package com.example.hibernate;
 
 import com.example.hibernate.dominio.Alumno;
+import com.example.hibernate.dominio.temporal.Busqueda;
 import com.example.hibernate.utils.BDUtils;
 import javax.persistence.EntityManager;
 
@@ -11,7 +12,7 @@ public class Demo {
         EntityManager em = BDUtils.getEntityManager();
         BDUtils.comenzarTransaccion(em);
         
-        em.persist(new Alumno());
+        em.persist(new Busqueda());
         
         BDUtils.commit(em);
     }
