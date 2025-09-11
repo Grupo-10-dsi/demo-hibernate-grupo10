@@ -1,6 +1,7 @@
 package com.example.hibernate.dominio.temporal;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -8,21 +9,25 @@ import java.util.UUID;
 public class Postulante {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @OneToMany
     @JoinColumn(name= "postulante_id", referencedColumnName = "id")
-    private List<Postulacion> postulacionesHechas;
+    private List<Postulacion> postulacionesHechas =  new ArrayList<>();
 
-    @OneToOne
+    @OneToOne()
     @JoinColumn(name = "detalle_id", referencedColumnName = "id")
     private DetallePostulante detalle;
 
     public Postulante() {}
 
-    public Postulante(DetallePostulante detalle, List<Postulacion> postulacionesHechas) {
-        this.detalle = detalle;
-        this.postulacionesHechas = postulacionesHechas;
+
+    public void setPostulacionesHechas(Postulacion unaPostulacion) {
+        this.postulacionesHechas.add(unaPostulacion);
+    }
+
+    public void setDetalle(DetallePostulante unDetalle) {
+        this.detalle = unDetalle;
     }
 }
